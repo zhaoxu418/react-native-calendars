@@ -48,7 +48,7 @@ class CalendarHeader extends Component {
   render() {
     let leftArrow = <View />;
     let rightArrow = <View />;
-    let weekDaysNames = weekDayNames(this.props.firstDay);
+    let weekDaysNames = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
     if (!this.props.hideArrows) {
       leftArrow = (
         <TouchableOpacity
@@ -78,21 +78,23 @@ class CalendarHeader extends Component {
     if (this.props.showIndicator) {
       indicator = <ActivityIndicator />;
     }
+        //     <View style={this.style.header}>
+        //   {leftArrow}
+        //   <View style={{ flexDirection: 'row' }}>
+        //     <Text style={this.style.monthText}>
+        //       {this.props.month.toString(this.props.monthFormat ? this.props.monthFormat : 'MMMM yyyy')}
+        //     </Text>
+        //     {indicator}
+        //   </View>
+        //   {rightArrow}
+        // </View>
+        console.log(weekDaysNames);
     return (
       <View>
-        <View style={this.style.header}>
-          {leftArrow}
-          <View style={{ flexDirection: 'row' }}>
-            <Text style={this.style.monthText}>
-              {this.props.month.toString(this.props.monthFormat ? this.props.monthFormat : 'MMMM yyyy')}
-            </Text>
-            {indicator}
-          </View>
-          {rightArrow}
-        </View>
+
         <View style={this.style.week}>
           {weekDaysNames.map((day, idx) => (
-            <Text key={idx} style={this.style.dayHeader}>{day}</Text>
+            <Text key={idx} style={{color:'#8b8b8b'}}>{day}</Text>
           ))}
         </View>
       </View>

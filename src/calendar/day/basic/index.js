@@ -53,8 +53,17 @@ class Day extends Component {
       textStyle.push(this.style.alignedText);
     }
 
+    let dotText = null;
+    if (marked.marked) {
+
+    } else {
+      if (marked.textValue) {
+        dotText = <Text style = {{fontSize:8, color:'#cccccc'}}>{marked.textValue}</Text>
+      }
+    }
+
     if (this.props.state === 'selected' || marked.selected) {
-      containerStyle.push(this.style.selected);
+      // containerStyle.push(this.style.selected);
       dotStyle.push(this.style.selectedDot);
       textStyle.push(this.style.selectedText);
     } else if (this.props.state === 'disabled' || marked.disabled) {
@@ -63,9 +72,33 @@ class Day extends Component {
       textStyle.push(this.style.todayText);
     }
     return (
-      <TouchableOpacity style={containerStyle} onPress={this.props.onPress}>
-        <Text style={textStyle}>{String(this.props.children)}</Text>
-        {dot}
+      <TouchableOpacity style={[containerStyle, {height:39}]} onPress={marked.textValue || marked.marked || this.props.state === 'disabled' || marked.disabled ? this.props.onPress : () => {console.log('没有记录')}}>
+      {
+        this.props.state === 'selected' || marked.selected ?
+        (
+          <View style = {{height:32, width:32, borderRadius:16, backgroundColor:'rgb(129, 159, 249)', position:'absolute', top:0, left:0}}>
+          </View>
+        ) : 
+        (
+          null
+        )
+      }
+      <Text style={{ color: this.props.state === 'selected' || marked.selected ? 'white' : '#8b8b8b', opacity: this.props.state === 'disabled' || marked.disabled ? 0.5 : 1, marginTop:7, fontSize:14, backgroundColor:'transparent'}}>{String(this.props.children)}</Text>
+        {
+          marked.marked ?
+          (
+            dot
+          ) : 
+          (
+            this.props.state === 'selected' || marked.selected ?
+            (
+              null
+            ) : 
+            (
+              dotText
+            )
+          )
+        }
       </TouchableOpacity>
     );
   }

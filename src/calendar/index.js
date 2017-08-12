@@ -211,7 +211,7 @@ class Calendar extends Component {
       }
     }
     return (
-      <View style={[this.style.container, this.props.style]}>
+      <View style={[this.style.container, this.props.style, {marginBottom:10}]}>
         <CalendarHeader
           theme={this.props.theme}
           hideArrows={this.props.hideArrows}
@@ -222,7 +222,9 @@ class Calendar extends Component {
           renderArrow={this.props.renderArrow}
           monthFormat={this.props.monthFormat}
         />
-        {weeks}
+        <View style = {{marginTop:13, marginBottom:5}}>
+          {weeks}
+        </View>
       </View>);
   }
 }

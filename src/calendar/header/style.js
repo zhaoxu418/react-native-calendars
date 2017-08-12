@@ -32,7 +32,7 @@ export default function(theme={}) {
       })
     },
     week: {
-      marginTop: 7,
+      marginTop: 18,
       flexDirection: 'row',
       justifyContent: 'space-around'
     },

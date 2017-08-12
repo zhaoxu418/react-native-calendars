@@ -8,7 +8,7 @@ export const failedColor = 'rgba(246, 126, 126,1)';
 
 export const textDefaultColor = '#2d4150';
 export const textColor = '#43515c';
-export const textLinkColor = '#00adf5';
+export const textLinkColor = 'rgb(129, 159, 249)';
 export const textSecondaryColor = '#7a92a5';
 
 export const textDayFontFamily = 'System';
@@ -17,16 +17,16 @@ export const textDayHeaderFontFamily = 'System';
 
 export const textDayFontSize = 16;
 export const textMonthFontSize = 16;
-export const textDayHeaderFontSize = 13;
+export const textDayHeaderFontSize = 14;
 
 export const calendarBackground = foregroundColor;
-export const textSectionTitleColor = '#b6c1cd';
+export const textSectionTitleColor = '#8b8b8b';
 export const selectedDayBackgroundColor = textLinkColor;
 export const selectedDayTextColor = foregroundColor;
 export const todayTextColor = textLinkColor;
 export const dayTextColor = textDefaultColor;
 export const textDisabledColor = '#d9e1e8';
-export const dotColor = textLinkColor;
+export const dotColor = 'rgb(253, 119, 0)';
 export const selectedDotColor = foregroundColor;
 export const arrowColor = textLinkColor;
 export const monthTextColor = textDefaultColor;
