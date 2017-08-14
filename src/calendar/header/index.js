@@ -48,7 +48,7 @@ class CalendarHeader extends Component {
   render() {
     let leftArrow = <View />;
     let rightArrow = <View />;
-    let weekDaysNames = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+    let weekDaysNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
     if (!this.props.hideArrows) {
       leftArrow = (
         <TouchableOpacity

@@ -1,31 +1,61 @@
 {
-  "name": "react-native-calendars",
-  "version": "1.5.6",
-  "main": "src/index.js",
-  "description": "React Native Calendar Components",
-  "scripts": {
-    "test": "jasmine src/*.spec.js && npm run lint",
-    "lint": "eslint src/ example/src"
-  },
-  "repository": {
+  "_from": "github:zhaoxu418/react-native-calendars",
+  "_id": "react-native-calendars@1.5.6",
+  "_inBundle": false,
+  "_integrity": "sha1-q06YBvBY2Dqlg08HrTguiXhm8CM=",
+  "_location": "/react-native-calendars",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/wix/react-native-calendars"
+    "raw": "react-native-calendars@github:zhaoxu418/react-native-calendars",
+    "name": "react-native-calendars",
+    "escapedName": "react-native-calendars",
+    "rawSpec": "github:zhaoxu418/react-native-calendars",
+    "saveSpec": "github:zhaoxu418/react-native-calendars",
+    "fetchSpec": null,
+    "gitCommittish": "master"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:zhaoxu418/react-native-calendars#2fdd53c99444e28937eb365e247b9da41268c127",
+  "_spec": "react-native-calendars@github:zhaoxu418/react-native-calendars",
+  "_where": "/Users/admin/Documents/company/blibee-sharp",
+  "author": {
+    "name": "Wix.com"
   },
-  "author": "Wix.com",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wix/react-native-calendars/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "prop-types": "^15.5.10",
     "xdate": "^0.8.0"
   },
+  "deprecated": false,
+  "description": "React Native Calendar Components",
   "devDependencies": {
-    "eslint": "^3.19.0",
     "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.0",
     "jasmine": "^2.5.2",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0"
-  }
+  },
+  "homepage": "https://github.com/wix/react-native-calendars#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "react-native-calendars",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wix/react-native-calendars.git"
+  },
+  "scripts": {
+    "lint": "eslint src/ example/src",
+    "test": "jasmine src/*.spec.js && npm run lint"
+  },
+  "version": "1.5.6"
 }
