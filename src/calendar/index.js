@@ -111,10 +111,56 @@ class Calendar extends Component {
     const minDate = parseDate(this.props.minDate);
     const maxDate = parseDate(this.props.maxDate);
     if (!(minDate && !dateutils.isGTE(day, minDate)) && !(maxDate && !dateutils.isLTE(day, maxDate))) {
-      this.updateMonth(day);
-      if (this.props.onDayPress) {
-        this.props.onDayPress(xdateToData(day));
+      console.log('aimday-------day-------');
+      console.log(xdateToData(day));
+      aimDay = xdateToData(day);
+      const currentDate = new Date();
+      const localCurrentMonth = currentDate.getMonth() + 1;
+      const localCurrentYear = currentDate.getFullYear();
+
+      const lastMont = xdateToData(this.state.currentMonth.clone());
+
+      console.log(lastMont);
+      console.log(localCurrentMonth);
+      console.log(localCurrentYear);
+      const minMonthDate = this.props.minMonthDate;
+      if (aimDay.year < minMonthDate.year || (aimDay.year === minMonthDate.year && aimDay.month < minMonthDate.month)) {
+        return;
       }
+
+      if (localCurrentYear !== aimDay.year) {
+        let aimMonthString = '';
+        const zeroText = '0';
+        if (aimDay.month >= 10) {
+          aimMonthString = aimDay.month;
+        } else {
+          aimMonthString = zeroText + aimDay.month;
+        }
+        const aimMonth = aimDay.year + aimMonthString;
+        this.props.updateMonthWithMonth(aimMonth);
+      } else {
+        if (aimDay.month > localCurrentMonth) {
+          return;
+        } else if (aimDay.month !== lastMont.month) {
+          let aimMonthString = '';
+          const zeroText = '0';
+          if (aimDay.month >= 10) {
+            aimMonthString = aimDay.month;
+          } else {
+            aimMonthString = zeroText + aimDay.month;
+          }
+          const aimMonth = aimDay.year + aimMonthString;
+          this.props.updateMonthWithMonth(aimMonth);
+        } else {
+          if (this.props.onDayPress) {
+            this.props.onDayPress(xdateToData(day));
+          }
+        }
+      }
+      this.setState({
+        currentMonth: day.clone()
+      })
+      // this.updateMonth(day)
     }
   }
 
