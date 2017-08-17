@@ -107,7 +107,7 @@ class Calendar extends Component {
     });
   }
 
-  pressDay(day) {
+  pressDay(value, day) {
     const minDate = parseDate(this.props.minDate);
     const maxDate = parseDate(this.props.maxDate);
     if (!(minDate && !dateutils.isGTE(day, minDate)) && !(maxDate && !dateutils.isLTE(day, maxDate))) {
@@ -153,7 +153,7 @@ class Calendar extends Component {
           this.props.updateMonthWithMonth(aimMonth);
         } else {
           if (this.props.onDayPress) {
-            this.props.onDayPress(xdateToData(day));
+            this.props.onDayPress(value, xdateToData(day));
           }
         }
       }
@@ -179,6 +179,10 @@ class Calendar extends Component {
       }
     }
     return false;
+  }
+
+  click(value, day) {
+    this.pressDay(value, day);
   }
 
   renderDay(day, id) {
@@ -209,7 +213,7 @@ class Calendar extends Component {
             key={id}
             state={state}
             theme={this.props.theme}
-            onPress={this.pressDay.bind(this, day)}
+            onPress={(value) => this.click.bind(this, value, day)}
             marked={this.getDateMarking(day)}
             markingExists={markingExists}
           >
