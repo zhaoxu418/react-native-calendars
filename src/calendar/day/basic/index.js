@@ -71,8 +71,9 @@ class Day extends Component {
     } else if (this.props.state === 'today') {
       textStyle.push(this.style.todayText);
     }
+    // onPress = { marked.textValue || marked.marked || this.props.state === 'disabled' || marked.disabled ? this.props.onPress : () => { console.log('没有记录') } }
     return (
-      <TouchableOpacity style={[containerStyle, {height:39}]} onPress={marked.textValue || marked.marked || this.props.state === 'disabled' || marked.disabled ? this.props.onPress : () => {console.log('没有记录')}}>
+      <TouchableOpacity style={[containerStyle, {height:39}]} onPress={this.props.onPress}>
       {
         this.props.state === 'selected' || marked.selected ?
         (
