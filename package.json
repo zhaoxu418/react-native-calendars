@@ -2,7 +2,7 @@
   "_from": "github:zhaoxu418/react-native-calendars",
   "_id": "react-native-calendars@1.5.6",
   "_inBundle": false,
-  "_integrity": "sha1-v3ktqsyK/i0sgFl/JI6B3hzMvaU=",
+  "_integrity": "sha1-3tu8pXLJfNXcgw8/h2xCVYDypw8=",
   "_location": "/react-native-calendars",
   "_phantomChildren": {},
   "_requested": {
@@ -18,7 +18,7 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "github:zhaoxu418/react-native-calendars#e4561fee6598a906b978d7eaef0b0062921fd44a",
+  "_resolved": "github:zhaoxu418/react-native-calendars#69af2ef4475e533ddf9eaf3deeff63af2ef98a73",
   "_spec": "react-native-calendars@github:zhaoxu418/react-native-calendars",
   "_where": "/Users/admin/Documents/company/blibee-sharp",
   "author": {

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {
   TouchableOpacity,
   Text,
+  Platform,
   View
 } from 'react-native';
 import PropTypes from 'prop-types';
@@ -75,16 +76,11 @@ class Day extends Component {
     return (
       <TouchableOpacity style={[containerStyle, { height: 39 }]} onPress={this.props.onPress(marked.textValue ? marked.textValue: '')}>
       {
-        this.props.state === 'selected' || marked.selected ?
-        (
-          <View style = {{height:32, width:32, borderRadius:16, backgroundColor:'rgb(129, 159, 249)', position:'absolute', top:0, left:0}}>
-          </View>
-        ) : 
-        (
-          null
-        )
+          <View style={[{ alignItems: 'center', justifyContent: 'center', height: 32, width: 32, borderRadius: 16, backgroundColor: this.props.state === 'selected' || marked.selected ? 'rgb(129, 159, 249)' : 'transparent', position: 'absolute', top: 0, left: 0 }, (Platform.OS === 'ios' && (this.props.state === 'selected' || marked.selected)) ? { shadowColor: '#03268D', shadowOpacity: 0.15, shadowOffset: { w: 0, h: 4 }, shadowRadius: 2 } : { elevation: this.props.state === 'selected' || marked.selected ? 4 : 0 }]}>
+            <Text style={{ color: this.props.state === 'selected' || marked.selected ? 'white' : '#8b8b8b', opacity: this.props.state === 'disabled' || marked.disabled ? 0.5 : 1, fontSize: 14, backgroundColor: 'transparent' }}>{String(this.props.children)}</Text>
+        </View>
       }
-      <Text style={{ color: this.props.state === 'selected' || marked.selected ? 'white' : '#8b8b8b', opacity: this.props.state === 'disabled' || marked.disabled ? 0.5 : 1, marginTop:7, fontSize:14, backgroundColor:'transparent'}}>{String(this.props.children)}</Text>
+      <Text style={{ color: 'transparent', opacity: 0.0, marginTop: 7, fontSize: 14, backgroundColor: 'transparent' }}>{String(this.props.children)}</Text>
         {
           marked.marked ?
           (
