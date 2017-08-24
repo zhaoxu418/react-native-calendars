@@ -59,7 +59,7 @@ class Day extends Component {
 
     } else {
       if (marked.textValue) {
-        dotText = <Text style = {{fontSize:8, color:'#cccccc'}}>{marked.textValue}</Text>
+        dotText = <Text style = {{fontSize:11, color:'#cccccc'}}>{marked.textValue}</Text>
       }
     }
 

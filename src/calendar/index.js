@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {
   View,
   ViewPropTypes,
+  Platform,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -272,7 +273,7 @@ class Calendar extends Component {
           renderArrow={this.props.renderArrow}
           monthFormat={this.props.monthFormat}
         />
-        <View style = {{marginTop:13, marginBottom:5}}>
+        <View style={{ marginTop: 13, marginBottom:Platform.OS === 'ios' ? 7 : 11}}>
           {weeks}
         </View>
       </View>);
