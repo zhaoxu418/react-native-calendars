@@ -2,24 +2,23 @@
   "_from": "github:zhaoxu418/react-native-calendars",
   "_id": "react-native-calendars@1.5.6",
   "_inBundle": false,
-  "_integrity": "sha1-3tu8pXLJfNXcgw8/h2xCVYDypw8=",
+  "_integrity": "sha1-jfMDt3EK8gXpsgqgM0HYEEHtD+c=",
   "_location": "/react-native-calendars",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "react-native-calendars@github:zhaoxu418/react-native-calendars",
-    "name": "react-native-calendars",
-    "escapedName": "react-native-calendars",
+    "raw": "github:zhaoxu418/react-native-calendars",
     "rawSpec": "github:zhaoxu418/react-native-calendars",
     "saveSpec": "github:zhaoxu418/react-native-calendars",
     "fetchSpec": null,
     "gitCommittish": "master"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "github:zhaoxu418/react-native-calendars#69af2ef4475e533ddf9eaf3deeff63af2ef98a73",
-  "_spec": "react-native-calendars@github:zhaoxu418/react-native-calendars",
+  "_resolved": "github:zhaoxu418/react-native-calendars#0afc082c2951fd4631e0bdf87b761b8c1b9972cc",
+  "_spec": "github:zhaoxu418/react-native-calendars",
   "_where": "/Users/admin/Documents/company/blibee-sharp",
   "author": {
     "name": "Wix.com"
