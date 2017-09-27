@@ -138,7 +138,7 @@ class Calendar extends Component {
           aimMonthString = zeroText + aimDay.month;
         }
         const aimMonth = aimDay.year + aimMonthString;
-        this.props.updateMonthWithMonth(aimMonth);
+        this.props.updateMonthWithMonth(aimMonth, value, aimDay);
       } else {
         if (aimDay.month > localCurrentMonth) {
           return;
@@ -151,7 +151,7 @@ class Calendar extends Component {
             aimMonthString = zeroText + aimDay.month;
           }
           const aimMonth = aimDay.year + aimMonthString;
-          this.props.updateMonthWithMonth(aimMonth);
+          this.props.updateMonthWithMonth(aimMonth, value, aimDay);
         } else {
           if (this.props.onDayPress) {
             this.props.onDayPress(value, xdateToData(day));
